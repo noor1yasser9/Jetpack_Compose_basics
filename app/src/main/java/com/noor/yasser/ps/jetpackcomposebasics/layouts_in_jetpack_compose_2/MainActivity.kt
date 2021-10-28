@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 private fun MyApp() {
-    PhotographerCard()
+    LayoutsCodelab()
 }
 
 
@@ -82,8 +82,10 @@ fun PhotographerCard(modifier: Modifier = Modifier) {
                 }
             }
         }
-        Button(onClick = { /*TODO*/ }, modifier = modifier
-            .padding(8.dp)) {
+        Button(
+            onClick = { /*TODO*/ }, modifier = modifier
+                .padding(8.dp)
+        ) {
             Row {
                 Image(imageVector = Icons.Filled.Favorite, contentDescription = "")
                 Spacer(modifier = Modifier.size(4.dp))
@@ -93,10 +95,49 @@ fun PhotographerCard(modifier: Modifier = Modifier) {
     }
 }
 
+@Composable
+fun LayoutsCodelab() {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(text = "LayoutsCodelab")
+                },
+                actions = {
+                    IconButton(onClick = { }) {
+                        Icon(
+                            Icons.Filled.Favorite, contentDescription = null
+                        )
+                    }
+                }
+            )
+        }
+    ) { innerPadding ->
+        BodyContent(Modifier.padding(innerPadding).padding(8.dp))
+    }
+}
+
+@Composable
+fun BodyContent(modifier: Modifier = Modifier) {
+    Column(modifier = modifier.padding(8.dp)) {
+        Text(text = "Hi there!")
+        Text(text = "Thanks for going through the Layouts codelab")
+    }
+}
+
+
 @Preview
 @Composable
 fun PhotographerCardPreview() {
     LayoutsCodelabTheme {
         PhotographerCard()
+    }
+}
+
+@Preview
+@Composable
+fun LayoutsCodelabPreview() {
+    LayoutsCodelabTheme {
+        LayoutsCodelab()
     }
 }
