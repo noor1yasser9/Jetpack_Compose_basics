@@ -53,8 +53,7 @@ fun OnboardingScreen(onContinueClicked: () -> Unit) {
 
 @Composable
 private fun MyApp() {
-    var shouldShowOnboarding = remember { mutableStateOf(true) }
-
+    val shouldShowOnboarding = remember { mutableStateOf(true) }
     if (shouldShowOnboarding.value)
         OnboardingScreen(onContinueClicked = { shouldShowOnboarding.value = false })
     else
@@ -62,7 +61,7 @@ private fun MyApp() {
 }
 
 @Composable
-private fun Greetings(names: List<String> = listOf("World", "Compose")) {
+private fun Greetings(names: List<String> = List(1000) { "$it" }) {
     Column(modifier = Modifier.padding(vertical = 4.dp)) {
         names.forEach {
             Greeting(it)
