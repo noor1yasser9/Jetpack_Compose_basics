@@ -1,4 +1,4 @@
-package com.noor.yasser.ps.jetpackcomposebasics
+package com.noor.yasser.ps.jetpackcomposebasics.jetpack_compose_basics_1
 
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import android.os.Bundle
@@ -22,7 +22,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.noor.yasser.ps.jetpackcomposebasics.ui.theme.BasicsCodelabTheme
+import com.noor.yasser.ps.jetpackcomposebasics.R
+import com.noor.yasser.ps.jetpackcomposebasics.jetpack_compose_basics_1.ui.theme.BasicsCodelabTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

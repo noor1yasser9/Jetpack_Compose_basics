@@ -1,4 +1,4 @@
-package com.noor.yasser.ps.jetpackcomposebasics.ui.theme
+package com.noor.yasser.ps.jetpackcomposebasics.layouts_in_jetpack_compose_2.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
