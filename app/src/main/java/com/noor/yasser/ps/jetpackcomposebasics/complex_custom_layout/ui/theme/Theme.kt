@@ -7,30 +7,46 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
-private val DarkColorPalette = darkColors(
-    secondary = Teal200,
-    surface = Blue,
-    onSurface = Navy,
-    primary = Navy,
-    onPrimary = Chartreuse
+private val PinkThemeLight = lightColors(
+    primary = pink500,
+    secondary = pink500,
+    primaryVariant = pink600,
+    onPrimary = Color.Black,
+    onSecondary = Color.Black
 )
 
-private val LightColorPalette = lightColors(
-    primaryVariant = Navy,
-    secondary = Teal200,
-    surface = Blue,
-    onSurface = Color.White,
-    primary = LightBlue,
-    onPrimary = Navy
-    /* Other default colors to override
-    background = Color.White,
-    surface = Color.White,
+
+private val BlueThemeLight = lightColors(
+    primary = blue700,
     onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
-    */
+    primaryVariant = blue800,
+    secondary = yellow500
 )
+
+private val BlueThemeDark = darkColors(
+    primary = blue200,
+    secondary = yellow200,
+    surface = blueDarkPrimary
+)
+
+
+private val YellowThemeLight = lightColors(
+    primary = yellow500,
+    primaryVariant = yellow400,
+    onPrimary = Color.Black,
+    secondary = blue700,
+    secondaryVariant = blue800,
+    onSecondary = Color.White
+)
+
+private val YellowThemeDark = darkColors(
+    primary = yellow200,
+    secondary = blue200,
+    onSecondary = Color.Black,
+    surface = yellowDarkPrimary
+)
+
+
 
 @Composable
 fun BasicsCodelabTheme(
@@ -38,14 +54,14 @@ fun BasicsCodelabTheme(
     content: @Composable() () -> Unit
 ) {
     val colors = if (darkTheme) {
-        DarkColorPalette
+        YellowThemeDark
     } else {
-        LightColorPalette
+        YellowThemeLight
     }
 
     MaterialTheme(
         colors = colors,
-        typography = com.noor.yasser.ps.jetpackcomposebasics.layouts_in_jetpack_compose_2.ui.theme.Typography,
+        typography = Typography,
         shapes = Shapes,
         content = content
     )

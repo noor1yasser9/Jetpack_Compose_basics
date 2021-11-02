@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackComposeBasics">
         <activity
-            android:name=".layouts_in_jetpack_compose_2.MainActivity"
+            android:name=".complex_custom_layout.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.JetpackComposeBasics.NoActionBar">
