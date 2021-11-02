@@ -11,13 +11,13 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Stable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.Layout
+import androidx.compose.ui.layout.*
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.*
 import com.noor.yasser.ps.jetpackcomposebasics.complex_custom_layout.dammy_data.topics
 import com.noor.yasser.ps.jetpackcomposebasics.jetpack_compose_basics_1.ui.theme.BasicsCodelabTheme
 import com.noor.yasser.ps.jetpackcomposebasics.layouts_in_jetpack_compose_2.ui.theme.LayoutsCodelabTheme
@@ -111,7 +111,13 @@ fun Chip(modifier: Modifier = Modifier, text: String) {
 
 @Composable
 fun BodyContent(modifier: Modifier = Modifier) {
-    Row(modifier = modifier.horizontalScroll(rememberScrollState())) {
+    Row(
+        modifier = modifier
+            .background(color = Color.LightGray)
+            .size(200.dp)
+            .padding(16.dp)
+            .horizontalScroll(rememberScrollState())
+    ) {
         StaggeredGrid(modifier = modifier) {
             for (topic in topics)
                 Chip(text = topic, modifier = modifier)
@@ -135,4 +141,39 @@ fun LayoutsCodelabPreview() {
     LayoutsCodelabTheme {
         BodyContent(Modifier.padding(8.dp))
     }
+}
+
+
+@Stable
+fun Modifier.padding(all: Dp) =
+    this.then(
+        PaddingModifier(start = all, top = all, end = all, bottom = all, rtlAware = true)
+    )
+
+// Implementation detail
+private class PaddingModifier(
+    val start: Dp = 0.dp,
+    val top: Dp = 0.dp,
+    val end: Dp = 0.dp,
+    val bottom: Dp = 0.dp,
+    val rtlAware: Boolean,
+) : LayoutModifier {
+    override fun MeasureScope.measure(
+        measurable: Measurable,
+        constraints: Constraints
+    ): MeasureResult {
+        val horizontal = start.roundToPx() + end.roundToPx()
+        val vertical = top.roundToPx() + bottom.roundToPx()
+        val placeable = measurable.measure(constraints = constraints.offset(-horizontal, -vertical))
+
+        val width = constraints.constrainWidth(placeable.width + horizontal)
+        val height = constraints.constrainHeight(placeable.height    + vertical)
+        return layout(width = width, height = height) {
+            if (rtlAware)
+                placeable.placeRelative(start.roundToPx(), top.roundToPx())
+            else
+                placeable.place(start.roundToPx(), top.roundToPx())
+        }
+    }
+
 }
