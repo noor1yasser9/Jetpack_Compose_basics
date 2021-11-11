@@ -111,16 +111,13 @@ fun Chip(modifier: Modifier = Modifier, text: String) {
 
 @Composable
 fun BodyContent(modifier: Modifier = Modifier) {
-    Row(
-        modifier = modifier
-            .background(color = Color.LightGray)
-            .size(200.dp)
-            .padding(16.dp)
-            .horizontalScroll(rememberScrollState())
-    ) {
+    Row(modifier = modifier.horizontalScroll(rememberScrollState())) {
         StaggeredGrid(modifier = modifier) {
             for (topic in topics)
-                Chip(text = topic, modifier = modifier)
+                Chip(
+                    text = topic,
+                    modifier = modifier
+                )
 
         }
     }
@@ -139,7 +136,11 @@ fun ChipPreview() {
 @Composable
 fun LayoutsCodelabPreview() {
     LayoutsCodelabTheme {
-        BodyContent(Modifier.padding(8.dp))
+        BodyContent(
+            Modifier.padding(
+                8.dp
+            )
+        )
     }
 }
 
@@ -147,7 +148,13 @@ fun LayoutsCodelabPreview() {
 @Stable
 fun Modifier.padding(all: Dp) =
     this.then(
-        PaddingModifier(start = all, top = all, end = all, bottom = all, rtlAware = true)
+        PaddingModifier(
+            start = all,
+            top = all,
+            end = all,
+            bottom = all,
+            rtlAware = true
+        )
     )
 
 // Implementation detail
@@ -167,7 +174,7 @@ private class PaddingModifier(
         val placeable = measurable.measure(constraints = constraints.offset(-horizontal, -vertical))
 
         val width = constraints.constrainWidth(placeable.width + horizontal)
-        val height = constraints.constrainHeight(placeable.height    + vertical)
+        val height = constraints.constrainHeight(placeable.height + vertical)
         return layout(width = width, height = height) {
             if (rtlAware)
                 placeable.placeRelative(start.roundToPx(), top.roundToPx())
