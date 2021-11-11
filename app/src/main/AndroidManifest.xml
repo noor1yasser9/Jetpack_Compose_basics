@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackComposeBasics">
         <activity
-            android:name=".constraint_layout.MainActivity"
+            android:name=".L1_Rows_Columns_Basic_Sizing.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.JetpackComposeBasics.NoActionBar">
