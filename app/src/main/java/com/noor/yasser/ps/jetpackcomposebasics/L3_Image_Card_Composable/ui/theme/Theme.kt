@@ -1,4 +1,4 @@
-package com.noor.yasser.ps.jetpackcomposebasics.L2_Modifiers.ui.theme
+package com.noor.yasser.ps.jetpackcomposebasics.L3_Image_Card_Composable.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
