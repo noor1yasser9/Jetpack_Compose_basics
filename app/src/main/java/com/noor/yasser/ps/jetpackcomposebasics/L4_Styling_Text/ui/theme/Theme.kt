@@ -1,4 +1,4 @@
-package com.noor.yasser.ps.jetpackcomposebasics.L1_Rows_Columns_Basic_Sizing.ui.theme
+package com.noor.yasser.ps.jetpackcomposebasics.L4_Styling_Text.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
