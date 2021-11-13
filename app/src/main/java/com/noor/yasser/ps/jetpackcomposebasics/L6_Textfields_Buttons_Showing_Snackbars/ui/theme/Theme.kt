@@ -1,4 +1,4 @@
-package com.noor.yasser.ps.jetpackcomposebasics.L1_Rows_Columns_Basic_Sizing.ui.theme
+package com.noor.yasser.ps.jetpackcomposebasics.L6_Textfields_Buttons_Showing_Snackbars.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
