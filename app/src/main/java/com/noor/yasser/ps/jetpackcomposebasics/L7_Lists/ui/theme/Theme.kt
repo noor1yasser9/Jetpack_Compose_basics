@@ -1,4 +1,4 @@
-package com.noor.yasser.ps.jetpackcomposebasics.L2_Modifiers.ui.theme
+package com.noor.yasser.ps.jetpackcomposebasics.L7_Lists.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
