@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackComposeBasics">
         <activity
-            android:name=".L8_ConstraintLayout.MainActivity"
+            android:name=".L9_Side_Effects_Effect_Handlers.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.JetpackComposeBasics.NoActionBar">
