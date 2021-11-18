@@ -1,4 +1,4 @@
-package com.noor.yasser.ps.jetpackcomposebasics.L9_Side_Effects_Effect_Handlers.ui.theme
+package com.noor.yasser.ps.jetpackcomposebasics.L10_Simple_Animations.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
@@ -46,7 +46,7 @@ fun BasicsCodelabTheme(
     MaterialTheme(
         colors = colors,
         typography = com.noor.yasser.ps.jetpackcomposebasics.layouts_in_jetpack_compose_2.ui.theme.Typography,
-        shapes = com.noor.yasser.ps.jetpackcomposebasics.L10_Simple_Animations.ui.theme.Shapes,
+        shapes = Shapes,
         content = content
     )
 }
