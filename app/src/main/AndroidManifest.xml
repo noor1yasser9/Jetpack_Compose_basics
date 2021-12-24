@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackComposeBasics">
         <activity
-            android:name=".L12_Draggable_Music_Knob.MainActivity"
+            android:name=".L7_Lists.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.JetpackComposeBasics.NoActionBar">
