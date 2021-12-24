@@ -29,6 +29,7 @@ import kotlin.math.atan2
 import kotlin.math.roundToInt
 
 class MainActivity : ComponentActivity() {
+    @ExperimentalFoundationApi
     @ExperimentalStdlibApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
