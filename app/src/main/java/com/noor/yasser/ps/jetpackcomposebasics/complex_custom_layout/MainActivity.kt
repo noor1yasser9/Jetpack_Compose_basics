@@ -20,7 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.*
 import com.noor.yasser.ps.jetpackcomposebasics.complex_custom_layout.dammy_data.topics
 import com.noor.yasser.ps.jetpackcomposebasics.jetpack_compose_basics_1.ui.theme.BasicsCodelabTheme
-import com.noor.yasser.ps.jetpackcomposebasics.L12_Draggable_Music_Knob.ui.theme.LayoutsCodelabTheme
+import com.noor.yasser.ps.jetpackcomposebasics.layouts_in_jetpack_compose_2.ui.theme.LayoutsCodelabTheme
 
 
 class MainActivity : ComponentActivity() {

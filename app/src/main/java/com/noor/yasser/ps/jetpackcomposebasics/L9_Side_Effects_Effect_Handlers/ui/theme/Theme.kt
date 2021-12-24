@@ -45,7 +45,7 @@ fun BasicsCodelabTheme(
 
     MaterialTheme(
         colors = colors,
-        typography = com.noor.yasser.ps.jetpackcomposebasics.L12_Draggable_Music_Knob.ui.theme.Typography,
+        typography = com.noor.yasser.ps.jetpackcomposebasics.L13_Making_a_Meditation.ui.theme.Typography,
         shapes = com.noor.yasser.ps.jetpackcomposebasics.L10_Simple_Animations.ui.theme.Shapes,
         content = content
     )

@@ -6,19 +6,11 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyListState
-import androidx.compose.foundation.lazy.rememberLazyListState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.*
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
@@ -27,15 +19,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.layout.*
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import coil.compose.rememberImagePainter
-import com.noor.yasser.ps.jetpackcomposebasics.L12_Draggable_Music_Knob.ui.theme.LayoutsCodelabTheme
 import com.noor.yasser.ps.jetpackcomposebasics.R
 import com.noor.yasser.ps.jetpackcomposebasics.complex_custom_layout.padding
-import kotlinx.coroutines.launch
 import kotlin.math.PI
 import kotlin.math.atan2
 import kotlin.math.roundToInt
@@ -63,11 +49,13 @@ class MainActivity : ComponentActivity() {
                         mutableStateOf(0f)
                     }
                     val barCount = 20
-                    MusicKnob(modifier = Modifier.size(100.dp)) {
+                   MusicKnob(
+                        modifier = Modifier.size(100.dp)
+                    ) {
                         volume = it
                     }
                     Spacer(modifier = Modifier.width(20.dp))
-                    VolumeBar(
+                   VolumeBar(
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(30.dp),
