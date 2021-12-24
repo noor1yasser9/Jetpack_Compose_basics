@@ -14,7 +14,6 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ExpandLess
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -36,7 +35,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            LayoutsCodelabTheme {
+            LayoutsCodelabTheme() {
                 Surface(color = MaterialTheme.colors.background) {
                     MyApp()
                 }
@@ -47,7 +46,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 private fun MyApp() {
-    LayoutsCodelab()
+  LayoutsCodelab()
 }
 
 
@@ -145,10 +144,10 @@ fun LayoutsCodelab() {
                     Text("Scroll to the end")
                 }
             }
-            BodyContent(
-                Modifier
-                    .padding(innerPadding)
-                    .padding(8.dp)
+             BodyContent(
+                 Modifier
+                     .padding(innerPadding)
+                     .padding(8.dp)
             )
 //            LazyList(scrollState)
         }
@@ -160,7 +159,7 @@ fun LazyList(scrollState: LazyListState) {
 
     LazyColumn(state = scrollState) {
         items(100) {
-            ImageListItem(it)
+             ImageListItem(it)
         }
     }
 }
@@ -171,7 +170,7 @@ fun BodyContent(modifier: Modifier = Modifier) {
 //        Text(text = "Hi there!")
 //        Text(text = "Thanks for going through the Layouts codelab")
 //    }
-    MyOwnColumn(modifier.padding(8.dp)) {
+     MyOwnColumn(modifier.padding(8.dp)) {
         Text("MyOwnColumn")
         Text("places items")
         Text("vertically.")
@@ -216,7 +215,9 @@ fun Modifier.firstBaselineToTop(
 @Composable
 fun TextWithPaddingToBaselinePreview() {
     LayoutsCodelabTheme {
-        Text("Hi there!", Modifier.firstBaselineToTop(32.dp))
+        Text("Hi there!",
+             Modifier.firstBaselineToTop(32.dp)
+        )
     }
 }
 
@@ -253,7 +254,7 @@ fun MyOwnColumn(
 @Composable
 fun PhotographerCardPreview() {
     LayoutsCodelabTheme {
-        PhotographerCard()
+         PhotographerCard()
     }
 }
 
@@ -262,6 +263,6 @@ fun PhotographerCardPreview() {
 @Composable
 fun LayoutsCodelabPreview() {
     LayoutsCodelabTheme {
-        LayoutsCodelab()
+         LayoutsCodelab()
     }
 }
