@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JetpackComposeBasics">
         <activity
-            android:name=".L13_Making_a_Meditation.MainActivity"
+            android:name=".L14_Make_a_Timer.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.JetpackComposeBasics.NoActionBar">

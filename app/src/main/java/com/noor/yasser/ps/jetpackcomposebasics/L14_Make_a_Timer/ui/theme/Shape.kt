@@ -1,4 +1,4 @@
-package com.noor.yasser.ps.jetpackcomposebasics.L13_Making_a_Meditation.ui.theme
+package com.noor.yasser.ps.jetpackcomposebasics.L14_Make_a_Timer.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
@@ -9,3 +9,4 @@ val Shapes = Shapes(
     medium = RoundedCornerShape(4.dp),
     large = RoundedCornerShape(0.dp)
 )
+
