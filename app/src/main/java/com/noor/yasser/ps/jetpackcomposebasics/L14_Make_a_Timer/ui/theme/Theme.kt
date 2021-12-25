@@ -1,4 +1,4 @@
-package com.noor.yasser.ps.jetpackcomposebasics.jetpack_compose_basics_1.ui.theme
+package com.noor.yasser.ps.jetpackcomposebasics.L14_Make_a_Timer.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
@@ -33,7 +33,7 @@ private val LightColorPalette = lightColors(
 )
 
 @Composable
-fun BasicsCodelabTheme(
+fun LayoutsCodelabTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable() () -> Unit
 ) {
@@ -45,7 +45,7 @@ fun BasicsCodelabTheme(
 
     MaterialTheme(
         colors = colors,
-        typography = com.noor.yasser.ps.jetpackcomposebasics.L13_Making_a_Meditation.Typography,
+        typography = Typography,
         shapes = Shapes,
         content = content
     )

@@ -1,4 +1,4 @@
-package com.noor.yasser.ps.jetpackcomposebasics.L13_Making_a_Meditation.ui.theme
+package com.noor.yasser.ps.jetpackcomposebasics.L13_Making_a_Meditation
 
 import androidx.compose.ui.graphics.Color
 
