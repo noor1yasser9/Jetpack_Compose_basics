@@ -1,4 +1,4 @@
-package com.noor.yasser.ps.jetpackcomposebasics.L11_Circular_Progress_Bar.ui.theme
+package com.noor.yasser.ps.jetpackcomposebasics.L15_jetpackcompose_canvas_icon_pack.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
@@ -46,7 +46,7 @@ fun BasicsCodelabTheme(
     MaterialTheme(
         colors = colors,
         typography = com.noor.yasser.ps.jetpackcomposebasics.L13_Making_a_Meditation.Typography,
-        shapes = com.noor.yasser.ps.jetpackcomposebasics.L15_jetpackcompose_canvas_icon_pack.ui.theme.Shapes,
+        shapes = Shapes,
         content = content
     )
 }
