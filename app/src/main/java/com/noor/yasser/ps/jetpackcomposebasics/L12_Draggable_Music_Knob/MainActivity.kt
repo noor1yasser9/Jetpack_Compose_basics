@@ -27,7 +27,6 @@ import kotlin.math.atan2
 import kotlin.math.roundToInt
 
 class MainActivity : ComponentActivity() {
-    @ExperimentalComposeUiApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -49,13 +48,13 @@ class MainActivity : ComponentActivity() {
                         mutableStateOf(0f)
                     }
                     val barCount = 20
-                   MusicKnob(
+                    MusicKnob(
                         modifier = Modifier.size(100.dp)
                     ) {
                         volume = it
                     }
                     Spacer(modifier = Modifier.width(20.dp))
-                   VolumeBar(
+                    VolumeBar(
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(30.dp),
@@ -99,7 +98,7 @@ fun VolumeBar(
 }
 
 
-@ExperimentalComposeUiApi
+@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun MusicKnob(
     modifier: Modifier = Modifier,
