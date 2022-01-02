@@ -57,6 +57,16 @@ fun getAllIcons() {
             GoogleAds()
             GoogleVoiceSearch()
         }
+        Row(horizontalArrangement = Arrangement.SpaceAround) {
+            StackOverflow()
+            Spotify()
+            Trello()
+        }
+        Row(horizontalArrangement = Arrangement.SpaceAround) {
+            Zoom()
+            AndroidIcon()
+            WeatherApp()
+        }
     }
 }
 
@@ -409,6 +419,307 @@ fun GoogleVoiceSearch() {
             size = Size(size.width.times(.40f), size.height.times(.40f)),
             topLeft = Offset(size.width.times(.30f), size.height.times(.30f))
         )
+
+    }
+}
+
+@Composable
+fun StackOverflow() {
+    Canvas(
+        modifier = Modifier
+            .size(100.dp)
+            .padding(16.dp)
+    ) {
+        drawRect(
+            color = Color(0xFFbcbbbb),
+            topLeft = Offset(size.width * .10f, size.height * .63f),
+            Size(size.width * .10f, size.height * .35f)
+        )
+        drawRect(
+            color = Color(0xFFbcbbbb),
+            topLeft = Offset(size.width * .10f, size.height * .89f),
+            Size(size.width * .89f, size.height * .10f)
+        )
+        drawRect(
+            color = Color(0xFFbcbbbb),
+            topLeft = Offset(size.width * .89f, size.height * .63f),
+            Size(size.width * .10f, size.height * .35f)
+        )
+        rotate(0f) {
+            drawRect(
+                color = Color(0xFFf48023),
+                topLeft = Offset(size.width * .28f, size.height * .72f),
+                Size(size.width * .54f, size.height * .10f)
+            )
+        }
+
+        rotate(6f) {
+            drawRect(
+                color = Color(0xFFf48023),
+                topLeft = Offset(size.width * .30f, size.height * .56f),
+                Size(size.width * .54f, size.height * .10f)
+            )
+        }
+        rotate(15f) {
+            drawRect(
+                color = Color(0xFFf48023),
+                topLeft = Offset(size.width * .30f, size.height * .40f),
+                Size(size.width * .54f, size.height * .10f)
+            )
+        }
+
+        rotate(24f) {
+            drawRect(
+                color = Color(0xFFf48023),
+                topLeft = Offset(size.width * .26f, size.height * .22f),
+                Size(size.width * .54f, size.height * .10f)
+            )
+        }
+        rotate(34f) {
+            drawRect(
+                color = Color(0xFFf48023),
+                topLeft = Offset(size.width * .22f, size.height * .06f),
+                Size(size.width * .54f, size.height * .10f)
+            )
+        }
+    }
+}
+
+
+@Composable
+fun Spotify() {
+    Canvas(
+        modifier = Modifier
+            .size(100.dp)
+            .padding(16.dp)
+    ) {
+        val width = size.width
+        val height = size.height
+        val path = androidx.compose.ui.graphics.Path().apply {
+            moveTo(width.times(.18f), height.times(.34f))
+            cubicTo(
+                width.times(.18f),
+                height.times(.35f),
+                width.times(.45f),
+                height.times(.20f),
+                width.times(.83f),
+                height.times(.40f)
+            )
+            moveTo(
+                width.times(.28f),
+                height.times(.50f),
+            )
+            cubicTo(
+                width.times(.28f),
+                height.times(.50f),
+                width.times(.45f),
+                height.times(.43f),
+                width.times(.73f),
+                height.times(.55f)
+            )
+            moveTo(
+                width.times(.33f),
+                height.times(.67f),
+            )
+            cubicTo(
+                width.times(.33f),
+                height.times(.67f),
+                width.times(.45f),
+                height.times(.62f),
+                width.times(.67f),
+                height.times(.72f)
+            )
+
+        }
+
+        drawCircle(color = Color(0xFF1ed760))
+        drawPath(
+            path = path,
+            color = Color.Black,
+            style = Stroke(width = width.times(.09f), cap = StrokeCap.Round)
+        )
+    }
+}
+
+
+@Composable
+fun Trello() {
+    Canvas(
+        modifier = Modifier
+            .size(100.dp)
+            .padding(16.dp)
+    ) {
+        drawRoundRect(color = Color(0xFF0269a9), cornerRadius = CornerRadius(20f, 20f))
+        drawRoundRect(
+            color = Color.White,
+            cornerRadius = CornerRadius(10f, 10f),
+            size = Size(width = size.width.times(.30f), size.height.times(.60f)),
+            topLeft = Offset(size.width.times(.13f), size.height.times(.20f))
+        )
+        drawRoundRect(
+            color = Color.White,
+            cornerRadius = CornerRadius(10f, 10f),
+            size = Size(width = size.width.times(.30f), size.height.times(.45f)),
+            topLeft = Offset(size.width.times(.58f), size.height.times(.20f))
+        )
+    }
+}
+
+
+@Composable
+fun Zoom() {
+    val zoomColors = listOf(Color(0xFF56a2ff), Color(0xFF3d83fc))
+    Canvas(
+        modifier = Modifier
+            .size(100.dp)
+            .padding(16.dp)
+    ) {
+
+        val width = size.width
+        val height = size.height
+        val pathHeart = androidx.compose.ui.graphics.Path().apply {
+            moveTo(width.times(.22f), height.times(.58f))
+            lineTo(width.times(.22f), height.times(.37f))
+            quadraticBezierTo(
+                width.times(.22f),
+                height.times(.34f),
+                width.times(.25f),
+                height.times(.34f)
+            )
+            lineTo(width.times(.54f), height.times(.34f))
+            quadraticBezierTo(
+                width.times(.62f),
+                height.times(.34f),
+                width.times(.62f),
+                height.times(.41f)
+            )
+            lineTo(width.times(.62f), height.times(.62f))
+            quadraticBezierTo(
+                width.times(.62f),
+                height.times(.65f),
+                width.times(.58f),
+                height.times(.65f)
+            )
+            lineTo(width.times(.30f), height.times(.65f))
+            quadraticBezierTo(
+                width.times(.22f),
+                height.times(.65f),
+                width.times(.22f),
+                height.times(.58f)
+            )
+            moveTo(width.times(.65f), height.times(.44f))
+            lineTo(width.times(.65f), height.times(.56f))
+            lineTo(width.times(.75f), height.times(.65f))
+            lineTo(width.times(.75f), height.times(.35f))
+            lineTo(width.times(.65f), height.times(.44f))
+            close()
+        }
+
+        drawRoundRect(
+            brush = Brush.verticalGradient(zoomColors),
+            cornerRadius = CornerRadius(60f, 60f)
+        )
+        drawPath(pathHeart, color = Color.White)
+    }
+
+}
+
+@Composable
+fun AndroidIcon() {
+
+    Canvas(
+        modifier = Modifier
+            .size(100.dp)
+    ) {
+
+
+        val height = this.size.height
+        val width = this.size.width
+        drawArc(
+            color = Color(0xFF58bd46),
+            startAngle = 0f,
+            useCenter = false,
+            sweepAngle = -180f,
+            size = Size(width = width.times(.60f), height = height.times(.55f)),
+            topLeft = Offset(width.times(.25f), height.times(.30f))
+        )
+        drawLine(
+            color = Color(0xFF58bd46),
+            start = Offset(width.times(.40f), height.times(.42f)),
+            strokeWidth = 15f,
+            cap = StrokeCap.Round,
+            end = Offset(width.times(.29f), height.times(.29f))
+        )
+        drawLine(
+            color = Color(0xFF58bd46),
+            start = Offset(width.times(.68f), height.times(.40f)),
+            strokeWidth = 15f,
+            cap = StrokeCap.Round,
+            end = Offset(width.times(.76f), height.times(.27f))
+        )
+        drawCircle(
+            color = Color.White,
+            radius = width.times(.04f),
+            center = Offset(width.times(.45f), height.times(.45f))
+        )
+        drawCircle(
+            color = Color.White, radius = width.times(.04f),
+            center = Offset(width.times(.64f), height.times(.45f)),
+        )
+    }
+}
+
+
+@Composable
+fun WeatherApp() {
+    val backgroundColor = listOf(Color(0xFF2078EE), Color(0xFF74E6FE))
+    val sunColor = listOf(Color(0xFFFFC200), Color(0xFFFFE100))
+    Canvas(
+        modifier = Modifier
+            .size(100.dp)
+            .padding(16.dp)
+    ) {
+        val width = size.width
+        val height = size.height
+        val path = androidx.compose.ui.graphics.Path().apply {
+            moveTo(width.times(.76f), height.times(.72f))
+            cubicTo(
+                width.times(.93f),
+                height.times(.72f),
+                width.times(.98f),
+                height.times(.41f),
+                width.times(.76f),
+                height.times(.40f)
+            )
+            cubicTo(
+                width.times(.75f),
+                height.times(.21f),
+                width.times(.35f),
+                height.times(.21f),
+                width.times(.38f),
+                height.times(.50f)
+            )
+            cubicTo(
+                width.times(.25f),
+                height.times(.50f),
+                width.times(.20f),
+                height.times(.69f),
+                width.times(.41f),
+                height.times(.72f)
+            )
+            close()
+        }
+        drawRoundRect(
+            brush = Brush.verticalGradient(backgroundColor),
+            cornerRadius = CornerRadius(50f, 50f),
+
+            )
+        drawCircle(
+            brush = Brush.verticalGradient(sunColor),
+            radius = width.times(.17f),
+            center = Offset(width.times(.35f), height.times(.35f))
+        )
+        drawPath(path = path, color = Color.White.copy(alpha = .90f))
 
     }
 }
