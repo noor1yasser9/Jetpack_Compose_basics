@@ -17,6 +17,8 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.*
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.clipPath
+import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
+import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -49,6 +51,11 @@ fun getAllIcons() {
             GoogleIcon()
             YoutubeIcon()
             GooglePhotosIcon()
+        }
+        Row(horizontalArrangement = Arrangement.SpaceAround) {
+            GoogleAssistant()
+            GoogleAds()
+            GoogleVoiceSearch()
         }
     }
 }
@@ -281,5 +288,127 @@ private fun GooglePhotosIcon() {
             size = Size(size.width * .50f, size.height * .50f),
             topLeft = Offset(size.width * .25f, size.height * .50f)
         )
+    }
+}
+
+
+@Composable
+private fun GoogleAssistant() {
+    Canvas(
+        modifier = Modifier
+            .size(100.dp)
+            .padding(16.dp)
+    ) {
+        val paint = Paint().apply {
+            color = Color.White.toArgb()
+            setShadowLayer(20f, 0f, 0f, Color.DarkGray.copy(alpha = .20f).toArgb())
+        }
+
+        drawIntoCanvas {
+            it.nativeCanvas.drawOval(this.size.width, this.size.height, 0f, 0f, paint)
+        }
+
+        drawCircle(
+            color = Color(0xFF4385f7),
+            radius = size.width * .20f,
+            center = Offset(size.width * .33f, size.height * .35f)
+        )
+        drawCircle(
+            color = Color(0xFFf04231),
+            radius = size.width * .12f,
+            center = Offset(size.width * .66f, size.height * .48f)
+        )
+        drawCircle(
+            color = Color(0xFFffbf00),
+            radius = size.width * .14f,
+            center = Offset(size.width * .66f, size.height * .78f)
+        )
+        drawCircle(
+            color = Color(0xFF30a952),
+            radius = size.width * .08f,
+            center = Offset(size.width * .84f, size.height * .32f)
+        )
+
+    }
+}
+
+@Composable
+fun GoogleAds() {
+    Canvas(
+        modifier = Modifier
+            .size(100.dp)
+            .padding(16.dp)
+    ) {
+
+        rotate(30f) {
+            drawRoundRect(
+                color = Color(0xFFffbf00),
+                cornerRadius = CornerRadius(40f, 40f),
+                topLeft = Offset(26f, 5f),
+                size = Size(size.width * .35f, size.height)
+            )
+        }
+
+        rotate(-30f) {
+            drawRoundRect(
+                color = Color(0xFF4385f7),
+                cornerRadius = CornerRadius(40f, 40f),
+                topLeft = Offset(size.width.div(2), 0f),
+                size = Size(size.width * .35f, size.height)
+            )
+        }
+        drawCircle(color = Color(0xFF30a952), radius = 35f, center = Offset(30f, 145f))
+    }
+}
+
+
+@Composable
+fun GoogleVoiceSearch() {
+    Canvas(
+        modifier = Modifier
+            .size(100.dp)
+            .padding(16.dp)
+    ) {
+        val paint = Paint().apply {
+            color = Color.White.toArgb()
+            setShadowLayer(20f, 0f, 0f, Color.DarkGray.copy(alpha = .20f).toArgb())
+        }
+
+        this.drawIntoCanvas {
+            it.nativeCanvas.drawOval(this.size.width, this.size.height, 0f, 0f, paint)
+        }
+
+        drawRoundRect(
+            color = Color(0xFF4385f7),
+            cornerRadius = CornerRadius(40f, 40f),
+            topLeft = Offset(size.width.times(.40f), size.height.times(.20f)),
+            size = Size(size.width * .20f, size.height.times(.40f))
+        )
+        drawRect(
+            color = Color(0xFF30a952),
+            topLeft = Offset(size.width.times(.47f), size.height.times(.72f)),
+            size = Size(size.width.times(.08f), size.height.times(.17f))
+        )
+
+        drawArc(
+            color = Color(0xFFffbf00),
+            startAngle = 0f,
+            sweepAngle = 180f,
+            useCenter = false,
+            style = Stroke(width = size.width.times(.08f)),
+            size = Size(size.width.times(.40f), size.height.times(.40f)),
+            topLeft = Offset(size.width.times(.30f), size.height.times(.30f))
+        )
+
+        drawArc(
+            color = Color(0xFFf04231),
+            startAngle = 0f,
+            sweepAngle = 130f,
+            useCenter = false,
+            style = Stroke(width = size.width.times(.08f)),
+            size = Size(size.width.times(.40f), size.height.times(.40f)),
+            topLeft = Offset(size.width.times(.30f), size.height.times(.30f))
+        )
+
     }
 }
