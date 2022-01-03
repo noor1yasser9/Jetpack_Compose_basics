@@ -46,7 +46,7 @@ fun BasicsCodelabTheme(
     MaterialTheme(
         colors = colors,
         typography = com.noor.yasser.ps.jetpackcomposebasics.L13_Making_a_Meditation.Typography,
-        shapes = com.noor.yasser.ps.jetpackcomposebasics.L15_jetpackcompose_canvas_icon_pack.ui.theme.Shapes,
+        shapes = com.noor.yasser.ps.jetpackcomposebasics.L16_bark.ui.theme.Shapes,
         content = content
     )
 }
