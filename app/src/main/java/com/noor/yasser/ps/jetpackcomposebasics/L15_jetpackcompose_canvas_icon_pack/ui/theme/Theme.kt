@@ -8,20 +8,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
-    secondary = com.noor.yasser.ps.jetpackcomposebasics.L7_Lists.ui.theme.Teal200,
-    surface = com.noor.yasser.ps.jetpackcomposebasics.L7_Lists.ui.theme.Blue,
-    onSurface = com.noor.yasser.ps.jetpackcomposebasics.L7_Lists.ui.theme.Navy,
-    primary = com.noor.yasser.ps.jetpackcomposebasics.L7_Lists.ui.theme.Navy,
-    onPrimary = com.noor.yasser.ps.jetpackcomposebasics.L7_Lists.ui.theme.Chartreuse
+    secondary =       Teal200,
+    surface =       Blue,
+    onSurface =       Navy,
+    primary =       Navy,
+    onPrimary =       Chartreuse
 )
 
 private val LightColorPalette = lightColors(
-    primaryVariant = com.noor.yasser.ps.jetpackcomposebasics.L7_Lists.ui.theme.Navy,
-    secondary = com.noor.yasser.ps.jetpackcomposebasics.L7_Lists.ui.theme.Teal200,
-    surface = com.noor.yasser.ps.jetpackcomposebasics.L7_Lists.ui.theme.Blue,
+    primaryVariant =       Navy,
+    secondary =       Teal200,
+    surface =       Blue,
     onSurface = Color.White,
-    primary = com.noor.yasser.ps.jetpackcomposebasics.L7_Lists.ui.theme.LightBlue,
-    onPrimary = com.noor.yasser.ps.jetpackcomposebasics.L7_Lists.ui.theme.Navy
+    primary =       LightBlue,
+    onPrimary =       Navy
     /* Other default colors to override
     background = Color.White,
     surface = Color.White,
@@ -45,8 +45,8 @@ fun BasicsCodelabTheme(
 
     MaterialTheme(
         colors = colors,
-        typography = com.noor.yasser.ps.jetpackcomposebasics.L13_Making_a_Meditation.Typography,
-        shapes = com.noor.yasser.ps.jetpackcomposebasics.L16_bark.ui.theme.Shapes,
+        typography =      Typography,
+        shapes =     Shapes,
         content = content
     )
 }
