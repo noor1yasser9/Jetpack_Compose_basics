@@ -14,11 +14,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.noor.yasser.ps.jetpackcomposebasics.R
 
+
 @Composable
 fun TopBar(onToggle: () -> Unit) {
 
     Row(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Text(
@@ -27,26 +29,26 @@ fun TopBar(onToggle: () -> Unit) {
                 style = MaterialTheme.typography.h5,
                 color = MaterialTheme.colors.surface
             )
+
             Spacer(modifier = Modifier.height(8.dp))
+
             Text(
                 text = "Adopt a new friend near you!",
                 textAlign = TextAlign.Start,
                 style = MaterialTheme.typography.subtitle1,
                 color = MaterialTheme.colors.surface
             )
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(0.dp, 24.dp, 36.dp, 0.dp),
-                horizontalArrangement = Arrangement.End
-            ) {
-                WigglesThemeSwitch(onToggle = { onToggle() })
-
-            }
+        }
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(0.dp, 24.dp, 36.dp, 0.dp),
+            horizontalArrangement = Arrangement.End
+        ) {
+            WigglesThemeSwitch(onToggle = { onToggle() })
         }
     }
 }
-
 
 @Composable
 fun WigglesThemeSwitch(onToggle: () -> Unit) {

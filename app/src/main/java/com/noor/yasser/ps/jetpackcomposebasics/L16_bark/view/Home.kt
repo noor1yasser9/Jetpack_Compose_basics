@@ -19,7 +19,11 @@ fun Home(
 ) {
     LazyColumn {
         item {
-            TopBar(onToggle = toggleTheme)
+            TopBar(
+                onToggle = {
+                    toggleTheme()
+                }
+            )
             Spacer(
                 modifier = Modifier.height(8.dp)
             )
