@@ -35,6 +35,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.noor.yasser.ps.jetpackcomposebasics.L16_bark.component.DogInfoCard
+import com.noor.yasser.ps.jetpackcomposebasics.L16_bark.component.InfoCard
 import com.noor.yasser.ps.jetpackcomposebasics.L16_bark.component.OwnerCard
 import com.noor.yasser.ps.jetpackcomposebasics.L16_bark.data.FakeDogDatabase
 import com.noor.yasser.ps.jetpackcomposebasics.R
@@ -92,7 +93,23 @@ fun DetailsView(id: Int) {
                 DogInfoCard(name, gender, location)
             }
         }
-        // My story details
+        item {
+            dog.apply {
+                Spacer(modifier = Modifier.height(24.dp))
+                Title(title = "Dog info")
+                Spacer(modifier = Modifier.height(16.dp))
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp, 0.dp, 16.dp, 0.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    InfoCard(title = "Age", value = dog.age.toString().plus(" yrs"))
+                    InfoCard(title = "Color", value = color)
+                    InfoCard(title = "Weight", value = weight.toString().plus("Kg"))
+                }
+            }
+        }
         item {
             dog.apply {
                 Spacer(modifier = Modifier.height(24.dp))
@@ -102,6 +119,24 @@ fun DetailsView(id: Int) {
                     OwnerCard(name, bio, image)
                 }
             }
+        }
+        item {
+            Spacer(modifier = Modifier.height(36.dp))
+            Button(
+                onClick = { /* Do something! */ },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(52.dp)
+                    .padding(16.dp, 0.dp, 16.dp, 0.dp),
+                colors = ButtonDefaults.textButtonColors(
+                    backgroundColor = colorResource(id = R.color.blue),
+                    contentColor = Color.White
+                )
+            ) {
+                Text("Adopt me")
+            }
+            Spacer(modifier = Modifier.height(24.dp))
+
         }
     }
 }
