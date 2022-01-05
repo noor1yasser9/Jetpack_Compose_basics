@@ -69,7 +69,7 @@ object FakeDogDatabase {
             owner
         ),
         Dog(
-            0,
+            5,
             "Hachiko",
             3.5,
             "Male",
@@ -81,7 +81,7 @@ object FakeDogDatabase {
             owner
         ),
         Dog(
-            1,
+            6,
             "Skooby Doo",
             3.5,
             "Male",
@@ -93,7 +93,7 @@ object FakeDogDatabase {
             owner
         ),
         Dog(
-            2,
+            7,
             "Miss Agnes",
             3.5,
             "Female",
@@ -105,7 +105,7 @@ object FakeDogDatabase {
             owner
         ),
         Dog(
-            3,
+            8,
             "Cyrus",
             3.5,
             "Male",
@@ -117,7 +117,7 @@ object FakeDogDatabase {
             owner
         ),
         Dog(
-            4,
+            9,
             "Shelby",
             3.5,
             "Female",
