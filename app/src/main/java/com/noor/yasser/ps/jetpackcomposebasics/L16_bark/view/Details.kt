@@ -31,8 +31,11 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.noor.yasser.ps.jetpackcomposebasics.L16_bark.component.DogInfoCard
+import com.noor.yasser.ps.jetpackcomposebasics.L16_bark.component.OwnerCard
 import com.noor.yasser.ps.jetpackcomposebasics.L16_bark.data.FakeDogDatabase
 import com.noor.yasser.ps.jetpackcomposebasics.R
 
@@ -63,6 +66,7 @@ fun Details(navController: NavController, id: Int) {
         })
 }
 
+@Preview
 @Composable
 fun DetailsView(id: Int) {
     LazyColumn(
@@ -71,5 +75,48 @@ fun DetailsView(id: Int) {
             .background(color = colorResource(id = R.color.background))
     ) {
         val dog = FakeDogDatabase.dogList[id]
+
+        item {
+            dog.apply {
+                val dogImage: Painter = painterResource(id = dog.image)
+                Image(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(346.dp),
+                    painter = dogImage,
+                    alignment = Alignment.CenterStart,
+                    contentDescription = "",
+                    contentScale = ContentScale.Crop
+                )
+                Spacer(modifier = Modifier.height(16.dp))
+                DogInfoCard(name, gender, location)
+            }
+        }
+        // My story details
+        item {
+            dog.apply {
+                Spacer(modifier = Modifier.height(24.dp))
+                Title(title = "Owner info")
+                Spacer(modifier = Modifier.height(16.dp))
+                owner.apply {
+                    OwnerCard(name, bio, image)
+                }
+            }
+        }
     }
+}
+
+
+@Composable
+fun Title(title: String) {
+    Text(
+        text = title,
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp, 0.dp, 0.dp, 0.dp),
+        color = colorResource(id = R.color.text),
+        style = MaterialTheme.typography.subtitle1,
+        fontWeight = FontWeight.W600,
+        textAlign = TextAlign.Start
+    )
 }
