@@ -6,21 +6,20 @@ import androidx.compose.material.MaterialTheme.typography
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
-    primary = Purple200,
-    primaryVariant = Purple700,
-    secondary = Teal200,
+    primary = com.noor.yasser.ps.jetpackcomposebasics.L17_PinLockScreen.ui.theme.Purple200,
+    primaryVariant = com.noor.yasser.ps.jetpackcomposebasics.L17_PinLockScreen.ui.theme.Purple700,
+    secondary = com.noor.yasser.ps.jetpackcomposebasics.L17_PinLockScreen.ui.theme.Teal200,
     background = blueBGNight,
     surface = pinkText,
     onSurface = cardNight
 )
 
 private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200,
+    primary = com.noor.yasser.ps.jetpackcomposebasics.L17_PinLockScreen.ui.theme.Purple500,
+    primaryVariant = com.noor.yasser.ps.jetpackcomposebasics.L17_PinLockScreen.ui.theme.Purple700,
+    secondary = com.noor.yasser.ps.jetpackcomposebasics.L17_PinLockScreen.ui.theme.Teal200,
     background = blueBG,
     surface = blueText,
     onSurface = card
