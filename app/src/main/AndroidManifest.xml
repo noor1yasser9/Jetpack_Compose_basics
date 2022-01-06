@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.dev.spikeysanju.wiggles">
         <activity
-            android:name=".L16_bark.MainActivity"
+            android:name=".L17_PinLockScreen.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.dev.spikeysanju.wiggles.NoActionBar">
