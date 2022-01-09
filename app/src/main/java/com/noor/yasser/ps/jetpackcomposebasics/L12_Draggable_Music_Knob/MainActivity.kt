@@ -21,7 +21,6 @@ import androidx.compose.ui.layout.*
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.noor.yasser.ps.jetpackcomposebasics.R
-import com.noor.yasser.ps.jetpackcomposebasics.complex_custom_layout.padding
 import kotlin.math.PI
 import kotlin.math.atan2
 import kotlin.math.roundToInt
