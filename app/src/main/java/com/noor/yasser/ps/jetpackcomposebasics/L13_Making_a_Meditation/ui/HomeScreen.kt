@@ -28,7 +28,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.noor.yasser.ps.jetpackcomposebasics.L13_Making_a_Meditation.*
 import com.noor.yasser.ps.jetpackcomposebasics.R
-import com.noor.yasser.ps.jetpackcomposebasics.complex_custom_layout.padding
 
 const val TAG_TEST_HOME_SCREEN_BOX = "tag test home screen box"
 

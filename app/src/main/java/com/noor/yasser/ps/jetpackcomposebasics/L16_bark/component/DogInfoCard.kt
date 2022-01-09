@@ -14,7 +14,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.noor.yasser.ps.jetpackcomposebasics.R
-import com.noor.yasser.ps.jetpackcomposebasics.complex_custom_layout.padding
 
 @Preview
 @Composable
