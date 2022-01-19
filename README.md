@@ -10,3 +10,4 @@
 - How to style and theme an app
 
 <img src="https://developer.android.com/codelabs/jetpack-compose-basics/img/87f2753c576d26f2.gif?authuser=1"/>
+
