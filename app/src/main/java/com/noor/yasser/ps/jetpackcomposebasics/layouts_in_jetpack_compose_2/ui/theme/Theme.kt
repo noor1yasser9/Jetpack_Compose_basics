@@ -8,20 +8,20 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 private val DarkColorPalette = darkColors(
-    secondary = Teal200,
-    surface = Blue,
-    onSurface = Navy,
-    primary = Navy,
-    onPrimary = Chartreuse
+    secondary =  Teal200,
+    surface =  Blue,
+    onSurface =  Navy,
+    primary =  Navy,
+    onPrimary =  Chartreuse
 )
 
 private val LightColorPalette = lightColors(
-    primaryVariant = Navy,
-    secondary = Teal200,
-    surface = Blue,
+    primaryVariant =  Navy,
+    secondary =  Teal200,
+    surface =  Blue,
     onSurface = Color.White,
-    primary = LightBlue,
-    onPrimary = Navy
+    primary =  LightBlue,
+    onPrimary =  Navy
     /* Other default colors to override
     background = Color.White,
     surface = Color.White,
@@ -45,8 +45,8 @@ fun LayoutsCodelabTheme(
 
     MaterialTheme(
         colors = colors,
-        typography = com.noor.yasser.ps.jetpackcomposebasics.layouts_in_jetpack_compose_2.ui.theme.Typography,
-        shapes = Shapes,
+        typography =  Typography,
+        shapes =  Shapes,
         content = content
     )
 }

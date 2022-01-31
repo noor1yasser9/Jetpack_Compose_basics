@@ -6,16 +6,17 @@
 
     <application
         android:allowBackup="true"
+
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.JetpackComposeBasics">
+        android:theme="@style/Theme.dev.spikeysanju.wiggles">
         <activity
-            android:name=".L1_Rows_Columns_Basic_Sizing.MainActivity"
+            android:name=".L18_ExoPlayerVideo.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.JetpackComposeBasics.NoActionBar">
+            android:theme="@style/Theme.dev.spikeysanju.wiggles.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
