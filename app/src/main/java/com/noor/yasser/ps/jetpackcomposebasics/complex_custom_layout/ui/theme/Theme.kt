@@ -8,42 +8,42 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 private val PinkThemeLight = lightColors(
-    primary = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.pink500,
-    secondary = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.pink500,
-    primaryVariant = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.pink600,
+    primary = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.pink500,
+    secondary = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.pink500,
+    primaryVariant = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.pink600,
     onPrimary = Color.Black,
     onSecondary = Color.Black
 )
 
 
 private val BlueThemeLight = lightColors(
-    primary = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.blue700,
+    primary = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.blue700,
     onPrimary = Color.White,
-    primaryVariant = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.blue800,
-    secondary = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.yellow500
+    primaryVariant = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.blue800,
+    secondary = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.yellow500
 )
 
 private val BlueThemeDark = darkColors(
-    primary = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.blue200,
-    secondary = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.yellow200,
-    surface = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.blueDarkPrimary
+    primary = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.blue200,
+    secondary = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.yellow200,
+    surface = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.blueDarkPrimary
 )
 
 
 private val YellowThemeLight = lightColors(
-    primary = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.yellow500,
-    primaryVariant = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.yellow400,
+    primary = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.yellow500,
+    primaryVariant = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.yellow400,
     onPrimary = Color.Black,
-    secondary = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.blue700,
-    secondaryVariant = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.blue800,
+    secondary = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.blue700,
+    secondaryVariant = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.blue800,
     onSecondary = Color.White
 )
 
 private val YellowThemeDark = darkColors(
-    primary = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.yellow200,
-    secondary = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.blue200,
+    primary = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.yellow200,
+    secondary = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.blue200,
     onSecondary = Color.Black,
-    surface = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.yellowDarkPrimary
+    surface = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.yellowDarkPrimary
 )
 
 
@@ -61,8 +61,8 @@ fun BasicsCodelabTheme(
 
     MaterialTheme(
         colors = colors,
-        typography = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.Typography,
-        shapes = com.noor.yasser.ps.jetpackcomposebasics.constraint_layout.ui.theme.Shapes,
+        typography = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.Typography,
+        shapes = com.noor.yasser.ps.jetpackcomposebasics.ComposePaging.ui.theme.Shapes,
         content = content
     )
 }
