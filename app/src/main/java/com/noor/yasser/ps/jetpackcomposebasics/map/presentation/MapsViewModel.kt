@@ -17,4 +17,36 @@ class MapsViewModel @Inject constructor(
 ) : ViewModel() {
     var state by mutableStateOf(MapState())
 
+
+    init {
+        viewModelScope.launch {
+
+        }
+    }
+
+    fun onEvent(event: MapEvent) {
+        when (event) {
+            is MapEvent.ToggleFalloutMap -> {
+                state = state.copy(
+                    properties = state.properties.copy(
+                        mapStyleOptions = if (state.isFalloutMap) {
+                            null
+                        } else MapStyleOptions(MapStyle.json),
+                    ),
+                    isFalloutMap = !state.isFalloutMap
+                )
+            }
+            is MapEvent.OnMapLongClick -> {
+                viewModelScope.launch {
+
+                }
+            }
+            is MapEvent.OnInfoWindowLongClick -> {
+                viewModelScope.launch {
+
+                }
+            }
+        }
+
+    }
 }
