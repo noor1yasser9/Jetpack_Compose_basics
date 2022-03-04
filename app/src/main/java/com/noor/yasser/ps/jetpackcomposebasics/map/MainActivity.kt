@@ -9,7 +9,9 @@ import androidx.compose.material.Surface
 import androidx.compose.ui.Modifier
 import com.noor.yasser.ps.jetpackcomposebasics.map.presentation.MapScreen
 import com.noor.yasser.ps.jetpackcomposebasics.map.ui.theme.MapsComposeGuideTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

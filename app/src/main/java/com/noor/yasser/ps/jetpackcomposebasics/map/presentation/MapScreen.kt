@@ -20,8 +20,7 @@ import com.google.maps.android.compose.Marker
 
 @Composable
 fun MapScreen(
-    viewModel: MapsViewModel
-    = androidx.lifecycle.viewmodel.compose.viewModel()
+    viewModel: MapsViewModel = androidx.lifecycle.viewmodel.compose.viewModel()
 ) {
     val scaffoldState = rememberScaffoldState()
     val uiSettings = remember {
