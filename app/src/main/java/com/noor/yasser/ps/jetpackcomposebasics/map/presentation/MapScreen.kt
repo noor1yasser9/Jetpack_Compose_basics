@@ -34,6 +34,7 @@ fun MapScreen(
         scaffoldState = scaffoldState,
         floatingActionButton = {
             FloatingActionButton(onClick = {
+                viewModel.onEvent(MapEvent.ToggleFalloutMap)
 
             }) {
                 Icon(
