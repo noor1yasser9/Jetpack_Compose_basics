@@ -5,7 +5,8 @@ import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavType
-import androidx.navigation.compose.navArgument
+//import androidx.navigation.compose.navArgument
+import androidx.navigation.navArgument
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
@@ -61,7 +62,7 @@ fun WigglesMain(toggleTheme: () -> Unit) {
                     )
                 ) + fadeOut(animationSpec = tween(300))
             },
-            arguments = listOf(navArgument("id") { type = NavType.IntType })
+//            arguments = listOf(navArgument("id") { type = NavType.IntType })
         ) {
             Details(navController, it.arguments?.getInt("id") ?: 0)
         }
